@@ -1,9 +1,9 @@
-<h1>URDB</h1>
-<ul>
-	
+<div class="row">
+	<h1>URDB</h1>
+	<ul>
 		<% @movies.each do |m| %>
-			<dt><%= link_to m.title, movie_path(m.id) %></dt>
-			<dd><%= m.description%></dd>
+			<div class="small-8 small-centered columns"><dt class="link"><%= link_to m.title, movie_path(m.id) %></dt>
+			<dd><%= m.description%></dd></div><br>
 		<% end %>
-	
-</ul>
+	</ul>
+</div>

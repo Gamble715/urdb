@@ -1,7 +1,8 @@
 <h1>URDB</h1>
 <ul>
 			<dt><%= @movie.title %></dt>
-			<dd><%= @movie.description%></dd>
+			<dd><%= @movie.description%></dd>	
 </ul>
+<iframe width="560" height="315" src="//www.youtube.com/embed/<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe><br>
 
 <%= link_to 'Movie Index', root_path %>

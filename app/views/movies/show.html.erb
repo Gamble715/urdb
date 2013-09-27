@@ -3,6 +3,7 @@
 			<dt><%= @movie.title %></dt>
 			<dd><%= @movie.description%></dd>	
 </ul>
+<iframe src="http://giphy.com/embed/<%= @movie.gif %>" width="281" height="281" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe><br>
 
 <%= link_to 'Movie Index', root_path %>

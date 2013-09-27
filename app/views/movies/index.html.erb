@@ -1,7 +1,10 @@
+<h1>URDB</h1>
 <ul>
 	
-		<% @movies.each do |movie| %>
-			<li><%= movie.title %></li>
+		<% @movies.each do |m| %>
+			<dt><%= link_to m.title, movie_path(m.id) %></dt>
+			<dd><%= m.description%></dd>
 		<% end %>
 	
 </ul>
+ 

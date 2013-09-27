@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: 
+  gif: 
+  trailer: 
+  description: MyText
+
+two:
+  title: 
+  gif: 
+  trailer: 
+  description: MyText

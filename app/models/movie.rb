@@ -4,6 +4,14 @@ class Movie < ActiveRecord::Base
   has_many :stars, through: :roles
   validates :title, presence: true
 
+  def self.average_rating
+    scores = []
+    Movie.all.each do |movie|
+      scores << movie.audience_rating
+    end
+    scores.inject { | sum, el| sum + el }.to_f / scores.size
+  end
+
   def rotten_finder
     RottenMovie.find(title: title, limit: 1)
   end

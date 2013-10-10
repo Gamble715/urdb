@@ -5,10 +5,11 @@ class Movie < ActiveRecord::Base
   validates :title, presence: true
 
   def self.average_rating
-    scores = []
-    Movie.all.each do |movie|
-      scores << movie.audience_rating
+    scores = self.all.collect do |movie|
+      movie.audience_rating
     end
+    scores.compact!
+    return nil if scores.empty?
     scores.inject { | sum, el| sum + el }.to_f / scores.size
   end
 
